@@ -9,7 +9,7 @@ def prueba():
     
     lista_desordenada = []
 
-    for i in 3:
+    for i in range(3):
         
         lista_desordenada.append(ingreso_entero())
 
@@ -18,10 +18,51 @@ def prueba():
     print("De Menor a Mayor", ordenar_menor_a_mayor(lista_desordenada))
 
 
-
 def ordenar_mayor_a_menor(lista):
-    pass
+    
+    ordenada = []
+
+    lista_interna = []
+    lista_interna.extend(lista)
+
+    while len(lista_interna) > 0:
+
+        mayor = lista_interna[0]
+            
+        for i in lista_interna:
+
+            if mayor < i:
+                mayor = i
+
+
+        ordenada.append(mayor)
+        lista_interna.remove(mayor)
+
+    return ordenada
+
 def ordenar_menor_a_mayor(lista):
-    pass
+
+    ordenada = []
+
+    lista_interna = []
+    lista_interna.extend(lista)
+
+    while len(lista_interna) > 0:
+
+        menor = lista_interna[0]
+            
+        for i in lista_interna:
+
+            if menor > i:
+                menor = i
+
+
+        ordenada.append(menor)
+        lista_interna.remove(menor)
+
+    return ordenada
+
+
+    
 if __name__ == '__main__':
     prueba()
