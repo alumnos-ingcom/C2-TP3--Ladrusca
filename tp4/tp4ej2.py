@@ -6,16 +6,6 @@
 
 from tp4ej1 import ingreso_entero
 
-def prueba():
-    
-    print('num1:')
-    num1 = ingreso_entero()
-    print('num2:')
-    num2 = ingreso_entero()
-
-    print('El resultado es: ', sumaLenta(num1, num2))
-
-
 def sumaLenta(n1, n2):
 
     result = n1
@@ -27,6 +17,15 @@ def sumaLenta(n1, n2):
             result += 1
 
     return result
+
+def prueba():
+
+    num1 = ingreso_entero(input('num1: '))
+
+    num2 = ingreso_entero(input('num2: '))
+
+    print('El resultado es: ', sumaLenta(num1, num2))
+
 
 if __name__ == "__main__":
     prueba()

@@ -6,26 +6,26 @@
 
 from tp4ej1 import ingreso_entero
 
-def prueba():
 
-    num = ingreso_entero()
+def es_primo(numero):
 
-    print("Es Primo: ", comprobacion_primo(num))
+    if numero > 1:
 
+        for dividendo in range(2, numero-1):
 
-def comprobacion_primo(num):
-
-    if num > 1:
-
-        for dividendo in range(2, num-1):
-
-            if num % dividendo == 0:
+            if numero % dividendo == 0:
                 return False
 
         return True
 
     return False
         
+def prueba():
+
+    num = ingreso_entero(input("Ingrese un entero: "))
+
+    print("Es Primo: ", es_primo(num))
+
 
 if __name__ == '__main__':
     prueba()

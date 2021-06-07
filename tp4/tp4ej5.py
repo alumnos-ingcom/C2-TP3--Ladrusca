@@ -3,28 +3,24 @@
 # Plantilla de ejercicio
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
+from tp4ej1 import ingreso_entero
 
+def signo(numero):
 
-def prueba():
-    print("Ingrese un numero")
-    n1= input()
-
-    print(comprobaciónNumerica(n1))
-
-def comprobaciónNumerica(num1):
-
-    try:
-        num1 = int(num1)
-    
-    except ValueError:
-        return "Valor invalido!"
-
-    if num1 < 0:
+    if numero < 0:
         return "es un numero negativo"
-    elif num1 == 0:
+    elif numero == 0:
         return "el numero es 0"
     else:
         return "el numero es positivo"
-        
+
+
+
+def prueba():
+    
+    numero = ingreso_entero(input("Ingrese un numero: "))
+
+    print(signo(numero))
+  
 if __name__ == '__main__':
     prueba()

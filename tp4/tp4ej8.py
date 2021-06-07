@@ -5,25 +5,11 @@
 ################
 from tp4ej1 import ingreso_entero
 
-def prueba():
-    
-    lista_desordenada = []
-
-    for i in range(3):
-        
-        lista_desordenada.append(ingreso_entero())
-
-    print("Original: ", lista_desordenada)
-    print("De Mayor a Menor: ", ordenar_mayor_a_menor(lista_desordenada))
-    print("De Menor a Mayor", ordenar_menor_a_mayor(lista_desordenada))
-
-
-def ordenar_mayor_a_menor(lista):
+def ordenar_mayor_a_menor(n1, n2, n3):
     
     ordenada = []
 
-    lista_interna = []
-    lista_interna.extend(lista)
+    lista_interna = [n1, n2, n3]
 
     while len(lista_interna) > 0:
 
@@ -38,14 +24,13 @@ def ordenar_mayor_a_menor(lista):
         ordenada.append(mayor)
         lista_interna.remove(mayor)
 
-    return ordenada
+    return tuple(ordenada)
 
-def ordenar_menor_a_mayor(lista):
+def ordenar_menor_a_mayor(n1, n2, n3):
 
     ordenada = []
 
-    lista_interna = []
-    lista_interna.extend(lista)
+    lista_interna = [n1, n2, n3]
 
     while len(lista_interna) > 0:
 
@@ -60,9 +45,22 @@ def ordenar_menor_a_mayor(lista):
         ordenada.append(menor)
         lista_interna.remove(menor)
 
-    return ordenada
+    return tuple(ordenada)
 
 
+def prueba():
     
+    n1 = ingreso_entero(input("Ingrese un entero: "))
+    n2 = ingreso_entero(input("Ingrese un entero: "))
+    n3 = ingreso_entero(input("Ingrese un entero: "))
+
+    print("De Mayor a Menor: ",
+        ordenar_mayor_a_menor(n1,n2,n3)
+    )
+    print("De Menor a Mayor",
+        ordenar_menor_a_mayor(n1,n2,n3)
+    )
+   
+   
 if __name__ == '__main__':
     prueba()
