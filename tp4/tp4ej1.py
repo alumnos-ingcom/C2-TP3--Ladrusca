@@ -5,14 +5,17 @@
 ################
 
 
-def ingreso_entero(valor_ingresado):
+def ingreso_entero(mensaje):
     """
     Esta funcion muestra un mensaje y agrega la # para indicar el ingreso
     de un número entero.
     """
 
     try:
-        entero = int(valor_ingresado)
+        ingreso = input(mensaje + " #")
+
+        entero = int(ingreso)
+
     except ValueError as err:
         raise IngresoIncorrecto("No era un número!") from err
     return entero
@@ -79,10 +82,7 @@ def prueba():
         
         if opcion == "1":
 
-            valor = input("ingrese un valor entero!:")
-
-            print("Valido:")
-            print(ingreso_entero(valor))
+            print(ingreso_entero("ingrese un valor entero!:"))
             
         elif opcion == "2":
 
