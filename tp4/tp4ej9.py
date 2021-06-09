@@ -24,7 +24,8 @@ def prueba():
 
     num = ingreso_entero(input("Ingrese un entero: "))
 
-    print("Es Primo: ", es_primo(num))
+    print("Es Primo: ")
+    print(es_primo(num))
 
 
 if __name__ == '__main__':

@@ -50,16 +50,14 @@ def prueba():
                 break
         
     
-    print("La lista es: ", 
-        lista_de_numeros
-    )
+    print("La lista es: ")
+    print(lista_de_numeros)
 
-    print("El valor minimo de la lista es: ",
-        minimo(lista_de_numeros)
-    )
-    print("El valor maximo de la lista es: ",
-        maximo(lista_de_numeros)
-    )
+    print("El valor minimo de la lista es: ")
+    print(minimo(lista_de_numeros))
+
+    print("El valor maximo de la lista es: ")
+    print(maximo(lista_de_numeros))
 
 if __name__ == '__main__':
     prueba()

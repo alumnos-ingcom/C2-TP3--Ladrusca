@@ -54,13 +54,11 @@ def prueba():
     n2 = ingreso_entero(input("Ingrese un entero: "))
     n3 = ingreso_entero(input("Ingrese un entero: "))
 
-    print("De Mayor a Menor: ",
-        ordenar_mayor_a_menor(n1,n2,n3)
-    )
-    print("De Menor a Mayor",
-        ordenar_menor_a_mayor(n1,n2,n3)
-    )
-   
+    print("De Mayor a Menor: ")
+    print(ordenar_mayor_a_menor(n1,n2,n3))
+
+    print("De Menor a Mayor")
+    print(ordenar_menor_a_mayor(n1,n2,n3))   
    
 if __name__ == '__main__':
     prueba()

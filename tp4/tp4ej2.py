@@ -24,7 +24,8 @@ def prueba():
 
     num2 = ingreso_entero(input('num2: '))
 
-    print('El resultado es: ', sumaLenta(num1, num2))
+    print('El resultado es: ')
+    print(sumaLenta(num1, num2))
 
 
 if __name__ == "__main__":

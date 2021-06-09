@@ -40,14 +40,13 @@ def prueba():
     num1 = ingreso_entero(input("Ingrese un entero: "))
     num2 = ingreso_entero(input("Ingrese un entero: "))
 
-    print(f"La division entre {num1} y",
-        f"{num2} da como resultado:"
-    )
+    print(f"La division entre {num1} y")
+    print(f"{num2} da como resultado:")
 
     resultado = division_lenta(num1, num2)
-    print("cociente:",resultado[0],
-        "resto:",resultado[1]
-    )
+
+    print("cociente:",resultado[0])
+    print("resto:",resultado[1])
 
 
 if __name__ == '__main__':

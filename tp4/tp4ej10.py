@@ -32,7 +32,8 @@ def prueba():
         
     num = ingreso_entero(input("Ingrese un entero: "))
 
-    print("Factores Primos: ", factores_primos(num))
+    print("Factores Primos:")
+    print(factores_primos(num))
 
 
 

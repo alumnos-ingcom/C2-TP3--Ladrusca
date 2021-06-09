@@ -45,14 +45,16 @@ def prueba():
             print("Ingrese la temperatura en Fahrenheit")            
             valor_crudo = input()
 
-            print("Centigrados: ", convertir_a_centigrados(valor_crudo))
+            print("Centigrados:")
+            print(convertir_a_centigrados(valor_crudo))
 
         if opcion == "2":
 
             print("Ingrese la temperatura en Centigrados")
             valor_crudo = input()
             
-            print("Fahrenheits: ", convertir_a_fahrenheit(valor_crudo))
+            print("Fahrenheits:")
+            print(convertir_a_fahrenheit(valor_crudo))
 
 
 if __name__ == '__main__':

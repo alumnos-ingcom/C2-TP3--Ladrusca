@@ -8,19 +8,20 @@ from tp4ej1 import ingreso_entero
 def signo(numero):
 
     if numero < 0:
-        return "es un numero negativo"
+        return "-"
     elif numero == 0:
-        return "el numero es 0"
+        return "0"
     else:
-        return "el numero es positivo"
+        return "+"
 
 
 
 def prueba():
     
     numero = ingreso_entero(input("Ingrese un numero: "))
-
-    print(signo(numero))
+    resultado = signo(numero)
+    
+    print(resultado)
   
 if __name__ == '__main__':
     prueba()

@@ -22,9 +22,10 @@ def comprobar_palindromo(cadena):
 
 def prueba():
     
-    texto_crudo = str(input("Ingrese un texto a comprobar: "))
+    texto_crudo = input("Ingrese un texto a comprobar: ")
+    texto_crudo = comprobar_palindromo(texto_crudo)
 
-    print(comprobar_palindromo(texto_crudo))
+    print(texto_crudo)
 
 if __name__ == '__main__':
     prueba()

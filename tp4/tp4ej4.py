@@ -19,10 +19,11 @@ def compara(num1, num2):
 def prueba():
 
     numero = ingreso_entero(input("Ingrese el primer numero: "))
-    
     otro_numero = ingreso_entero(input("Ingrese el segundo numero: "))
+    
+    resultado = compara(numero, otro_numero)
 
-    print(compara(numero, otro_numero))
+    print(resultado)
 
 
 if __name__ == '__main__':
