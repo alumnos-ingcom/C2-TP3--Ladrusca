@@ -29,9 +29,7 @@ def ingreso_entero_reintento(mensaje, cantidad_reintentos=5):
         try:
             valor_ingresado = input(mensaje)
 
-            numero = int(valor_ingresado)
-
-            return numero
+            return  int(valor_ingresado)
             
         except:
             
