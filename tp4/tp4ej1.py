@@ -21,20 +21,23 @@ def ingreso_entero(mensaje):
     return entero
 
 
-def ingreso_entero_reintento(valor_ingresado, cantidad_reintentos=5):
+def ingreso_entero_reintento(mensaje, cantidad_reintentos=5):
     ''' FUNCION QUE PERMITE EQUIVOCARSE UNA CANTIDAD DE VECES DEFINIDA '''
-
+    
     while cantidad_reintentos >= 0:
 
         try:
-            return int(valor_ingresado)
+            valor_ingresado = input(mensaje)
+
+            numero = int(valor_ingresado)
+
+            return numero
             
         except:
             
             if cantidad_reintentos > 0:
 
                 print(f"El valor no es valido, debe ser un entero. Le quedan {cantidad_reintentos} intentos")
-                mensaje = input("Vuelva a intentar: ")
 
             cantidad_reintentos -= 1
 
@@ -88,16 +91,12 @@ def prueba():
 
             valor = input("ingrese un valor entero en el rango de 0 a 10!:")
 
-            print("Valido:")
-            print(ingreso_entero_restringido(valor))
+            print(ingreso_entero_restringido("Valido:"))
             
         
         elif opcion == "3":
             
-            valor = input("ingrese un valor entero!(5 chances!):")
-
-            print("Valido:")
-            print(ingreso_entero_reintento(valor))
+            print(ingreso_entero_reintento("ingrese un valor entero!:"))
             
 
         elif opcion == "4":
