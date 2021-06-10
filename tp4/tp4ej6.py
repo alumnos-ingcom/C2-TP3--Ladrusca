@@ -6,31 +6,6 @@
 
 from tp4ej1 import ingreso_entero
 
-def prueba():
-    
-    lista_de_numeros = []
-    bucle = True
-
-    while bucle:
-
-        lista_de_numeros.append(ingreso_entero())
-
-        while bucle:
-            print("Quiere ingresar otro numero? (s/n)")
-
-            res = input()
-            if res == "n":
-                bucle = False
-            
-            elif res == "s":
-                break
-        
-    
-    print("La lista es: ", lista_de_numeros)
-    print("El valor minimo de la lista es: ", minimo(lista_de_numeros))
-    print("El valor maximo de la lista es: ", maximo(lista_de_numeros))
-
-
 def minimo(lista):
 
     valor_minimo = lista[0]
@@ -52,6 +27,37 @@ def maximo(lista):
             valor_maximo = i
 
     return valor_maximo       
+
+def prueba():
+    
+    lista_de_numeros = []
+    bucle = True
+
+    while bucle:
+
+        numero = input("Ingrese un entero: ")
+
+        lista_de_numeros.append(ingreso_entero(numero))
+
+        while bucle:
+            print("Quiere ingresar otro numero? (s/n)")
+
+            res = input()
+            if res == "n":
+                bucle = False
+            
+            elif res == "s":
+                break
+        
+    
+    print("La lista es: ")
+    print(lista_de_numeros)
+
+    print("El valor minimo de la lista es: ")
+    print(minimo(lista_de_numeros))
+
+    print("El valor maximo de la lista es: ")
+    print(maximo(lista_de_numeros))
 
 if __name__ == '__main__':
     prueba()

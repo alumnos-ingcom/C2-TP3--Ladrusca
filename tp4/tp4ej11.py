@@ -3,14 +3,6 @@
 # Plantilla de ejercicio
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
-from tp4ej1 import ingreso_entero
-
-def prueba():
-    
-    print("Ingrese un texto a comprobar:")
-    texto_crudo = str(input())
-
-    print("El texto es Palindromo? ", comprobar_palindromo(texto_crudo))
 
 def comprobar_palindromo(cadena):
 
@@ -27,6 +19,13 @@ def comprobar_palindromo(cadena):
             return False
 
     return True
+
+def prueba():
+    
+    texto_crudo = input("Ingrese un texto a comprobar: ")
+    texto_crudo = comprobar_palindromo(texto_crudo)
+
+    print(texto_crudo)
 
 if __name__ == '__main__':
     prueba()

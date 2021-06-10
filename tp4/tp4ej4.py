@@ -3,25 +3,9 @@
 # Plantilla de ejercicio
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
+from tp4ej1 import ingreso_entero
 
-
-def prueba():
-    print("Ingrese el primer numero")
-    n1= input()
-    
-    print("Ingrese el segundo numero")
-    n2= input()
-
-    print(comprobaciónNumerica(n1, n2))
-
-def comprobaciónNumerica(num1, num2):
-
-    try:
-        num1 = int(num1)
-        num2 = int(num2)
-    
-    except ValueError:
-        return "Valores invalidos!"
+def compara(num1, num2):
 
     if num1 < num2:
         return -1
@@ -32,6 +16,15 @@ def comprobaciónNumerica(num1, num2):
         
 
     
+def prueba():
+
+    numero = ingreso_entero(input("Ingrese el primer numero: "))
+    otro_numero = ingreso_entero(input("Ingrese el segundo numero: "))
+    
+    resultado = compara(numero, otro_numero)
+
+    print(resultado)
+
 
 if __name__ == '__main__':
     prueba()

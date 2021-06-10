@@ -5,25 +5,16 @@
 ################
 from tp4ej1 import ingreso_entero
 
-def prueba():
+def division_lenta(dividendo, divisor):
 
-    num1 = ingreso_entero()
-    num2 = ingreso_entero()
-
-    print(f"La division entre {num1} y {num2} da como resultado:")
-    print(division_lenta(num1, num2))
-
-
-def division_lenta(n1, n2):
-
-    num1 = n1
-    num2 = n2
+    num1 = dividendo
+    num2 = divisor
     cociente = 0
     resto = 0
 
-    if n1 < 0:
+    if dividendo < 0:
         num1 *= -1
-    if n2 < 0:
+    if divisor < 0:
         num2 *= -1
 
     while num1 >= num2:
@@ -31,15 +22,32 @@ def division_lenta(n1, n2):
         cociente += 1
         num1 -= num2 
 
+
     resto = num1 / num2
     
-    if n1 > 0 and n2 > 0:
+    if dividendo > 0 and divisor > 0:
         pass    
     
     else:
         cociente *= -1
     
-    return f"cociente: {cociente} Resto: {resto}"
+    result = (cociente, resto)
+    return result
+
+
+def prueba():
+
+    num1 = ingreso_entero(input("Ingrese un entero: "))
+    num2 = ingreso_entero(input("Ingrese un entero: "))
+
+    print(f"La division entre {num1} y")
+    print(f"{num2} da como resultado:")
+
+    resultado = division_lenta(num1, num2)
+
+    print("cociente:",resultado[0])
+    print("resto:",resultado[1])
+
 
 if __name__ == '__main__':
     prueba()
